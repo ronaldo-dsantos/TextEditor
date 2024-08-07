@@ -24,7 +24,7 @@ namespace TextEditor
       {
         case 0: System.Environment.Exit(0); break;
         case 1: Abrir(); break;
-        case 2: Editar(); break;
+        case 2: Criar(); break;
         default: Menu(); break;
       }
     }
@@ -35,9 +35,9 @@ namespace TextEditor
       Console.WriteLine("Qual o caminho do arquivo?");
       var path = Console.ReadLine();
 
-      using (var file = new StreamReader(path))
+      using (var file = new StreamReader(path)) // StreamReader para ler um arquivo
       {
-        var text = file.ReadToEnd();
+        var text = file.ReadToEnd(); // ReadToEnd para ler o arquivo até o final
         Console.WriteLine(text);
       }
 
@@ -46,7 +46,7 @@ namespace TextEditor
       Menu();
     }
 
-    static void Editar()
+    static void Criar()
     {
       Console.Clear();
       Console.WriteLine("Digite o seu texto abaixo (ESC para sair)");
@@ -58,7 +58,7 @@ namespace TextEditor
         text += Console.ReadLine();
         text += Environment.NewLine;
       }
-      while (Console.ReadKey().Key != ConsoleKey.Escape);
+      while (Console.ReadKey().Key != ConsoleKey.Escape); // Enquanto a tecla digitada for diferente de ESC, faça...
 
       Salvar(text);
     }
@@ -69,15 +69,14 @@ namespace TextEditor
       Console.WriteLine("Qual caminho para salvar o arquivo?");
       var path = Console.ReadLine();
 
-      using (var file = new StreamWriter(path)) // using para abrir e fechar o arquivo automaticamente
+      using (var file = new StreamWriter(path)) // using para abrir e fechar o arquivo automaticamente | StreamWriter para escrever um arquivo
       {
-        file.Write(text);
+        file.Write(text); // Write = Escreva
       }
 
       Console.WriteLine($"Arquivo {path} salvo com sucesso!");
       Console.ReadLine();
       Menu();
     }
-
   }
 }

@@ -12,3 +12,4 @@ C:\Users\ronal\OneDrive\Documentos\Balta.io\TextEditor\obj\Debug\net8.0\refint\T
 C:\Users\ronal\OneDrive\Documentos\Balta.io\TextEditor\obj\Debug\net8.0\TextEditor.pdb
 C:\Users\ronal\OneDrive\Documentos\Balta.io\TextEditor\obj\Debug\net8.0\TextEditor.genruntimeconfig.cache
 C:\Users\ronal\OneDrive\Documentos\Balta.io\TextEditor\obj\Debug\net8.0\ref\TextEditor.dll
+C:\Users\ronal\OneDrive\Documentos\Balta.io\TextEditor\obj\Debug\net8.0\TextEditor.sourcelink.json
